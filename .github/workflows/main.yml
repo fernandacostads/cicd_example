@@ -29,8 +29,8 @@ jobs:
 
       - name: commit files
         run: |
-          git config --locale user.email "action@github.com"
-          git config --locale user.name "Github Action"
+          git config --local user.email "action@github.com"
+          git config --local user.name "Github Action"
           git add -A
           git diff-index --quiet HEAD || (git commit -a -m "updated logs" --allow-empty)
 
@@ -39,4 +39,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: main
-      
