@@ -54,7 +54,5 @@ jobs:
         context: .
         push: true
         tags: fernandacostads/es2_cicd:latest
-          context: .
-          push: true
           
           
